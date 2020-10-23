@@ -19,7 +19,7 @@ The exporter run on port `9758` and it is **officially** registered upstream at 
 
 # Installation:
 
-At this time
+At this time only from source build is supported
 
 # Usage:
 
