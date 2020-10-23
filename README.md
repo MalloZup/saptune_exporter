@@ -1,7 +1,6 @@
 # Saptune exporter
 
 This is a bespoke Prometheus exporter used to enable the monitoring of saptune.
-`
 The exporter run on port `9758` and it is **officially** registered upstream at Prometheus doc: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
 
 

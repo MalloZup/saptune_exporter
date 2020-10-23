@@ -43,7 +43,6 @@ func (c *MiscCollector) setSaptuneVersionMetric(ch chan<- prometheus.Metric) {
 		system.ErrorExit("", 1)
 	}
 	SaptuneVersion := sconf.GetString("SAPTUNE_VERSION", "")
-	// check if this is always major only and no dot
 	if SaptuneVersionF, err := strconv.ParseFloat(SaptuneVersion, 32); err == nil {
 		ch <- c.MakeGaugeMetric("version", float64(SaptuneVersionF))
 	}
