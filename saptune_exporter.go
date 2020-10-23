@@ -25,6 +25,15 @@ func main() {
 		prometheus.MustRegister(miscCollector)
 		log.Info("Saptune Meta collector registered")
 	}
+
+	noteCollector, err := NewNoteCollector()
+	if err != nil {
+		log.Warn(err)
+	} else {
+		prometheus.MustRegister(noteCollector)
+		log.Info("Saptune Note collector registered")
+	}
+
 	// serve metrics
 	http.HandleFunc("/", landing)
 	http.Handle("/metrics", promhttp.Handler())
