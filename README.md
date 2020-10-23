@@ -1,6 +1,6 @@
 # Saptune exporter
 
-This is a bespoke Prometheus exporter used to enable the monitoring of Pacemaker based HA clusters.  
+This is a bespoke Prometheus exporter used to enable the monitoring of saptune.
 `
 The exporter run on port `9758` and it is **officially** registered upstream at Prometheus doc: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
 
@@ -24,11 +24,11 @@ At this time
 # Usage:
 
 You can run the exporter in any of the nodes you have saptune installed.
-
+```
 $ ./saptune_exporter 
 INFO[0000] Saptune Solution collector registered        
 INFO[0000] Serving metrics on port 9758                 
-
+```
 # Design:
 
 The following project follows convention used by implementation of other exporters like https://github.com/ClusterLabs/ha_cluster_exporter and prometheus upstream conventions.
