@@ -16,11 +16,11 @@ type NoteCollector struct {
 }
 
 // NewNoteCollector creates a new solution saptune collector
-func NewNoteCollector() (*SolutionCollector, error) {
-	c := &SolutionCollector{
+func NewNoteCollector() (*NoteCollector, error) {
+	c := &NoteCollector{
 		NewDefaultCollector(subsystemNote),
 	}
-	// this metric are set by  setSolutionEnabledMetric
+
 	c.SetDescriptor("enabled", "This metrics show with 1 all the enabled notes on the system", []string{"noteName"})
 
 	return c, nil
