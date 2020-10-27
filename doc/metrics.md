@@ -10,10 +10,8 @@ General notes:
 These are the currently implemented subsystems.
 
 1. [Solution](#solution)
-2. [Corosync](#corosync)
-3. [SBD](#sbd)
-4. [DRBD](#drbd)
-5. [Scrape](#scrape)
+2. [Note](#note)
+3. [Misc](#misc)
 
 
 # Solution:
@@ -29,4 +27,14 @@ This metrics are related to the saptune solution collector.
 
 - `saptune_solution_maxdb_enabled`
 
+..;
 
+# Note
+
+Saptune note related metrics
+
+# Misc
+
+Saptune misc metrics.
+
+Like showing version of the exporter etc.
