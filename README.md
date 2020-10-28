@@ -24,6 +24,7 @@ Other distros: clone this repo and use `go build` for building the binary
 ### openSUSE
 Ensure you have following repository:
 
+https://build.opensuse.org/repositories/network:ha-clustering:sap-deployments:devel
 
 ```
 zypper in prometheus-saptune_exporter
