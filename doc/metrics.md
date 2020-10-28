@@ -14,27 +14,4 @@ These are the currently implemented subsystems.
 3. [Misc](#misc)
 
 
-# Solution:
-This metrics are related to the saptune solution collector.
-
-- `saptune_solution_hana_enabled` 
-
- Status of hanadb solution. 1 means the solution is enabled on node, 0 is disabled.
-
-- `saptune_solution_bobj_enabled`
-
- Status of bobj solution. 1 means the solution is enabled on node, 0 is disabled.
-
-- `saptune_solution_maxdb_enabled`
-
-..;
-
-# Note
-
-Saptune note related metrics
-
-# Misc
-
-Saptune misc metrics.
-
-Like showing version of the exporter etc.
+For the metrics the documentation is not yet avail since the metrics API/Design is yet not stable

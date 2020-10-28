@@ -1,6 +1,7 @@
 # Saptune exporter
 
-This is a bespoke Prometheus exporter used to enable the monitoring of saptune.
+This is a bespoke Prometheus exporter used to enable the monitoring of [saptune](https://github.com/SUSE/saptune)
+
 The exporter run on port `9758` and it is **officially** registered upstream at Prometheus doc: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
 
 
@@ -18,7 +19,17 @@ The exporter run on port `9758` and it is **officially** registered upstream at 
 
 # Installation:
 
-At this time only from source build is supported
+Other distros: clone this repo and use `go build` for building the binary
+
+### openSUSE
+Ensure you have following repository:
+
+
+```
+zypper in prometheus-saptune_exporter
+
+systemctl start prometheus-saptune_exporter
+```
 
 # Usage:
 
