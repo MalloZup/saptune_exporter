@@ -34,6 +34,9 @@ func main() {
 		log.Info("Saptune Note collector registered")
 	}
 
+	// disable golang specific metrics
+	prometheus.Unregister(prometheus.NewGoCollector())
+
 	// serve metrics
 	http.HandleFunc("/", landing)
 	http.Handle("/metrics", promhttp.Handler())

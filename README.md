@@ -14,7 +14,9 @@ The exporter run on port `9758` and it is **officially** registered upstream at 
 
 # Features:
 
-* monitor and export saptune solution metric
+* saptune solution metric
+* saptune notes metric
+* saptune version metric
 
 # Installation:
 
