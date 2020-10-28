@@ -1,6 +1,6 @@
 # Saptune exporter
 
-This is a bespoke Prometheus exporter used to enable the monitoring of [saptune](https://github.com/SUSE/saptune)
+This is a Prometheus exporter used to enable the monitoring of [saptune](https://github.com/SUSE/saptune)
 
 The exporter run on port `9758` and it is **officially** registered upstream at Prometheus doc: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
 
@@ -9,8 +9,7 @@ The exporter run on port `9758` and it is **officially** registered upstream at 
 
 1. [Features](#features)
 2. [Installation](#installation)
-3. [Usage](#usage)
-   1. [Metrics](doc/metrics.md)
+3. [Metrics](doc/metrics.md)
 4. [Design](#design)
 
 # Features:
@@ -31,6 +30,9 @@ zypper in prometheus-saptune_exporter
 
 systemctl start prometheus-saptune_exporter
 ```
+
+The exporters run on `9758` port, so you visit the http endpoint visualize  metrics exported.
+
 
 # Usage:
 
