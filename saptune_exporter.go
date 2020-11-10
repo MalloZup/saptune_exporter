@@ -18,11 +18,11 @@ func main() {
 		prometheus.MustRegister(solutionCollector)
 		log.Info("Saptune Solution collector registered")
 	}
-	miscCollector, err := NewMiscCollector()
+	metaCollector, err := NewMetaCollector()
 	if err != nil {
 		log.Warn(err)
 	} else {
-		prometheus.MustRegister(miscCollector)
+		prometheus.MustRegister(metaCollector)
 		log.Info("Saptune Meta collector registered")
 	}
 

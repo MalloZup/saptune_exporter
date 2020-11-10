@@ -1,26 +1,23 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"strconv"
 
-	"github.com/SUSE/saptune/system"
 	"github.com/SUSE/saptune/txtparser"
 	"github.com/prometheus/client_golang/prometheus"
 	log "github.com/sirupsen/logrus"
 )
 
-const subsystem_misc = "misc"
+const subsystem_misc = "meta"
 
-// MiscCollector is the saptune collector for general infos
-type MiscCollector struct {
+// MetaCollector is the saptune collector for general infos
+type MetaCollector struct {
 	DefaultCollector
 }
 
-// NewMiscCollector creates a new solution saptune collector
-func NewMiscCollector() (*MiscCollector, error) {
-	c := &MiscCollector{
+// NewMetaCollector creates a new solution saptune collector
+func NewMetaCollector() (*MetaCollector, error) {
+	c := &MetaCollector{
 		NewDefaultCollector(subsystem_misc),
 	}
 	// this metric are set by  setSolutionEnabledMetric
@@ -30,17 +27,16 @@ func NewMiscCollector() (*MiscCollector, error) {
 }
 
 // Collect various metrics for saptune solution
-func (c *MiscCollector) Collect(ch chan<- prometheus.Metric) {
+func (c *MetaCollector) Collect(ch chan<- prometheus.Metric) {
 	log.Debugln("Collecting saptune solution metrics...")
 	c.setSaptuneVersionMetric(ch)
 }
 
-func (c *MiscCollector) setSaptuneVersionMetric(ch chan<- prometheus.Metric) {
-	// get saptune version
+func (c *MetaCollector) setSaptuneVersionMetric(ch chan<- prometheus.Metric) {
+	// get major saptune version
 	sconf, err := txtparser.ParseSysconfigFile("/etc/sysconfig/saptune", true)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error: Unable to read file '/etc/sysconfig/saptune': %v\n", err)
-		system.ErrorExit("", 1)
+		log.Warnf("Error: Unable to read file '/etc/sysconfig/saptune': %v\n", err)
 	}
 	SaptuneVersion := sconf.GetString("SAPTUNE_VERSION", "")
 	if SaptuneVersionF, err := strconv.ParseFloat(SaptuneVersion, 32); err == nil {

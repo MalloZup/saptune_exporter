@@ -32,7 +32,6 @@ func (c *NoteCollector) Collect(ch chan<- prometheus.Metric) {
 	c.setNoteListMetric(ch)
 }
 
-//
 func (c *NoteCollector) setNoteListMetric(ch chan<- prometheus.Metric) {
 	noteList, err := exec.Command("saptune", "note", "enabled").CombinedOutput()
 	if err != nil {
