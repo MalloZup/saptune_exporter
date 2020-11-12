@@ -21,7 +21,7 @@ func NewNoteCollector() (*NoteCollector, error) {
 		NewDefaultCollector(subsystemNote),
 	}
 
-	c.SetDescriptor("enabled", "This metrics show with 1 all the enabled notes on the system", []string{"noteName"})
+	c.SetDescriptor("enabled", "This metrics show with 1 all the enabled notes on the system", []string{"noteID"})
 
 	return c, nil
 }

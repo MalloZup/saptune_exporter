@@ -7,6 +7,7 @@ import (
 
 const NAMESPACE = "saptune"
 
+// DefaultCollector for prometheus
 type DefaultCollector struct {
 	subsystem   string
 	descriptors map[string]*prometheus.Desc
