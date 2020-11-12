@@ -8,7 +8,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-const subsystem_misc = "meta"
+const subsystem_meta = "meta"
 
 // MetaCollector is the saptune collector for general infos
 type MetaCollector struct {
@@ -18,7 +18,7 @@ type MetaCollector struct {
 // NewMetaCollector creates a new solution saptune collector
 func NewMetaCollector() (*MetaCollector, error) {
 	c := &MetaCollector{
-		NewDefaultCollector(subsystem_misc),
+		NewDefaultCollector(subsystem_meta),
 	}
 	// this metric are set by  setSolutionEnabledMetric
 	c.SetDescriptor("version", "Show version of saptune", nil)
